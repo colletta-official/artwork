@@ -29,10 +29,10 @@ function dataLoad()
 {
 	for(var i=0;i<imgList.length;i++)
 	{
-		var title=imgList[i].title.replace( / /gi, '_');
+		var title='"'+imgList[i].title.replace( / /gi, '_')+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
-		var $wide=$("<div class='wide' id='"+title+"'></div>");
+		var $wide=$('<div class="wide" id='+title+'></div>');
 		var $widePicArea=$("<div class='widePicArea'></div>");
 		/*
 		for(var j=0; j=imgList[i].src.length; j++)

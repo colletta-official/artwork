@@ -56,7 +56,7 @@ section{
 //animation
 @-webkit-keyframes slideInUp{
 	from{
-		-webkit-transform: translate(0, 200);
+		-webkit-transform: translate(0, 100%);
 		transform: translate(0, 50);
 		opacity:0;
 	}
@@ -68,7 +68,7 @@ section{
 }
 @keyframes slideInUp{
 	from{
-		-webkit-transform: translate(0, 200);
+		-webkit-transform: translate(0, 100%);
 		transform: translate(0, 50);
 		opacity:0;
 	}

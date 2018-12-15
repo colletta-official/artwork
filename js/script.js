@@ -4,12 +4,17 @@ $(document).ready(function(){
 		var top=$(this).offset().top;
 		var bot=$(window).height();
 		var hei=$(this).height();
-//		if(top<bot-hei) $(this).css('opacity', '1');
+		if(top<bot-hei)
+		{
+			$(this).css('opacity', '1');
+			var $temp=$(this).find(".popup").detach();
+			$(this).append($temp);
+		}
 	});
 	$(".thumbnail img").each(function () {
 		$(this).on("hover", function (e) {
 			e.preventDefault();
-			var $p=$(this).find(".popup").eq(0);
+			var $p=$(this).siblings().eq(0);
 			$p.stop().fadeToggle("slow");
 		});
 	});

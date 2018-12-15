@@ -62,15 +62,25 @@ section{
 	width:88.8888888%;
 	height:88.8888888%;
 	background-color:RGBA(0,0,0,0.4);
-	color:#ffffff;
 	transition:opacity 0.5s;
 	cursor:pointer;
 }
 .popup div{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	width:90%;
 	height:90%;
 	margin:5%;
 	outline:3px solid #ffffff;
+	font-family: "777Kidbutterfly", sans-serif;
+	color:#ffffff;
+}
+.titlePic {
+	font-size: 1.5em;
+	word-break: keep-all;
 }
 .popup:hover{
 	opacity:1;

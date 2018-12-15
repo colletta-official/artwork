@@ -88,6 +88,10 @@ section{
 	opacity:1;
 }
 
+#wideContainer{
+	position:fixed;
+	z-index:100;
+}
 .wide{
 	display:flex;
 	justify-content:center;

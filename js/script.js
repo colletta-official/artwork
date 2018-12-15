@@ -33,7 +33,8 @@ function dataLoad()
 	for(var i=0;i<imgList.length;i++)
 	{
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
-		var $popup=$("<div class='popup'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
+		var $popup=$("<div><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
+		$popup.addClass(".popup");
 		$tac.append($popup);
 		$tac.appendTo($(".list").eq(0));
 	}

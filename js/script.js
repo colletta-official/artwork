@@ -1,17 +1,20 @@
 $(document).ready(function(){
 	dataLoad();
-	$(".thumbnail").each(function (e) {
+	$(".thumbnail").each(function () {
 		var top=$(this).offset().top;
 		var bot=$(window).height();
 		var hei=$(this).height();
 		if(top<bot-hei) $(this).css('opacity', '1');
+	});
+	$(".thumbnail img").each(function () {
 		$(this).on("hover", function (e) {
+			e.preventDefault();
 			var $p=$(this).find(".popup").eq(0);
 			$p.stop().fadeToggle("slow");
 		});
 	});
 	$(".scrollBlind")[0].onscroll=function(){
-		$(".thumbnail").each(function (e) {
+		$(".thumbnail").each(function () {
 			var top=$(this).offset().top;
 			var bot=$(window).height();
 			var hei=$(this).height();

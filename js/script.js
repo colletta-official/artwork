@@ -5,6 +5,10 @@ $(document).ready(function(){
 		var bot=$(window).height();
 		var hei=$(this).height();
 		if(top<bot-hei) $(this).css('opacity', '1');
+		$(this).on("hover", function (e) {
+			var $p=$(this).find(".popup").eq(0);
+			$p.fadeToggle("slow");
+		});
 	});
 	$(".scrollBlind")[0].onscroll=function(){
 		$(".thumbnail").each(function (e) {
@@ -20,7 +24,9 @@ function dataLoad()
 	for(var i=0;i<imgList.length;i++)
 	{
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
+		var $popup=$("<div class='popup'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].title+date"</p><div></div>")
 		$tac.css('opacity', 0);
+		$tac.append($popup);
 		$tac.appendTo($(".list").eq(0));
 	}
 }

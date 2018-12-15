@@ -64,7 +64,9 @@ section{
 	background-color:RGBA(0,0,0,0.4);
 	color:#ffffff;
 }
-
+.viz{
+	opacity:1;
+}
 //animation
 @-webkit-keyframes slideInUp{
 	from{

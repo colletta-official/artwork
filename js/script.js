@@ -5,7 +5,7 @@ function dataLoad()
 {
 	for(var i=0;i<imgList.length;i++)
 	{
-		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+"'></div>");
+		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		$tac.appendTo($(".list").eq(0));
 	}
 }

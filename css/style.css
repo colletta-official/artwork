@@ -40,6 +40,7 @@ section{
 	flex-flow:row wrap;
 }
 .thumbnail{
+	position:relative;
 	display:flex;
 	max-width:337.5px;
 	max-height:337.5px;

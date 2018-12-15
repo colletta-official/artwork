@@ -3,10 +3,10 @@ $(document).ready(function(){
 	$(".scrollBlind")[0].onscroll=function(){
 		$(".thumbnail").each(function (e) {
 			var top=$(this).offset().top;
-			var bot=$(".scrollBlind").height();
+			var bot=$(window).height();
 			var hei=$(this).height();
 			console.log(this, top, bot, hei);
-			if(top-hei<bot) $(this).addClass('slideInUp');
+			if(top<bot-hei) $(this).addClass('slideInUp');
 		});
 	};
 });

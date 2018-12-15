@@ -5,6 +5,7 @@ $(document).ready(function(){
 			var top=$(this).offset().top;
 			var bot=$(".scrollBlind").height();
 			var hei=$(this).height();
+			console.log(this, top, bot, hei);
 			if(top+hei<bot) $(this).addClass('slideInUp');
 		});
 	};

@@ -57,10 +57,10 @@ function pad(n, width) {
 function viewPic(i)
 {
 	location.href="#"+i;
-	$(.closeButton).css('opacity', '1');
+	$(".closeButton").css('opacity', '1');
 }
 function closePic()
 {
 	location.href="#";
-	$(.closeButton).css('opacity', '0');
+	$(".closeButton").css('opacity', '0');
 }

@@ -51,6 +51,18 @@ section{
 .thumbnail img{
 	max-width:300px;
 	width:88.8888888%;
+	cursor:pointer;
+}
+.popup{
+	position:absolute;
+	top:5.5555555%;
+	left:5.5555555%;
+	opacity:0;
+	max-width:300px;
+	width:88.8888888%;
+	height:88.8888888%;
+	background-color:RGBA(0,0,0,0.4);
+	color:#ffffff;
 }
 
 //animation

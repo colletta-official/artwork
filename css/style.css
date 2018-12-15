@@ -5,3 +5,41 @@ li:nth-child(2){
 li:nth-child(2) p{
 	color:#f398a5;
 }
+
+section{
+	display:flex;
+	flex-flow:row wrap;
+	width:100vw;
+	height:auto;
+}
+.sectionTitle{
+	order:-1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 80px;
+}
+.sectionTitle hr{
+	display:inline-block;
+	border: 1px solid #ccc;
+	max-width:150px;
+	width:30%;
+	margin:0.3em 0px;
+}
+.sectionTitle span{
+	font-family: "777Kidbutterfly", sans-serif;
+	font-size: 2.25em;
+	margin:0px 20px;
+}
+@media all and (max-width:768px){
+	.sectionTitle hr{
+		max-width:100px;
+		width:20%;
+	}
+}
+@media all and (max-width:425px){
+	.sectionTitle{
+		height:50px;
+	}
+}

@@ -6,9 +6,7 @@ $(document).ready(function(){
 		var hei=$(this).height();
 		if(top<bot-hei)
 		{
-			$(this).css('opacity', '1');
-			var $temp=$(this).find(".popup").detach();
-			$(this).append($temp);
+			$(this).css('background-color', '#24adaf');
 		}
 	});
 	$(".thumbnail img").each(function () {

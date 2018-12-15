@@ -5,6 +5,7 @@ $(document).ready(function(){
 		var bot=$(window).height();
 		var hei=$(this).height();
 		if(top<bot-hei) $(this).css('opacity', '1');
+		else $(this).css('opacity', '0');
 	});
 	$(".thumbnail popup").each(function () {
 		$(this).on("hover", function (e) {
@@ -33,7 +34,6 @@ function dataLoad()
 	{
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
-		$tac.css('opacity', 0);
 		$tac.append($popup);
 		$tac.appendTo($(".list").eq(0));
 	}

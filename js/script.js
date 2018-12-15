@@ -1,11 +1,17 @@
 $(document).ready(function(){
 	dataLoad();
+	$(".thumbnail").each(function (e) {
+		var top=$(this).offset().top;
+		var bot=$(window).height();
+		var hei=$(this).height();
+		if(top<bot-hei) $(this).css('opacity', '1');
+	});
 	$(".scrollBlind")[0].onscroll=function(){
 		$(".thumbnail").each(function (e) {
 			var top=$(this).offset().top;
 			var bot=$(window).height();
 			var hei=$(this).height();
-			if(top<bot-hei) $(this).addClass('slideInUp');
+			if(top<bot-hei && $(this).css('opacity') == '0') $(this).addClass('slideInUp');
 		});
 	};
 });

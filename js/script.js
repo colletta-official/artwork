@@ -7,18 +7,6 @@ $(document).ready(function(){
 		if(top<bot-hei) $(this).css('opacity', '1');
 		else $(this).css('opacity', '0');
 	});
-	$(".thumbnail popup").each(function () {
-		$(this).on("hover", function (e) {
-			e.preventDefault();
-			/*
-			var $p=$(this).siblings().eq(0);
-			$p.stop().fadeToggle("slow");
-			console.log($p, "dimi");
-			*/
-			console.log(this, "dimi");
-			$(this).stop().fadeToggle("slow");
-		});
-	});
 	$(".scrollBlind")[0].onscroll=function(){
 		$(".thumbnail").each(function () {
 			var top=$(this).offset().top;

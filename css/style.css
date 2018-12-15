@@ -8,7 +8,8 @@ li:nth-child(2) p{
 
 section{
 	display:flex;
-	flex-flow:row wrap;
+	flex-flow:column;
+	align-items:center;
 	width:100vw;
 	height:auto;
 }
@@ -32,12 +33,18 @@ section{
 	font-size: 2.25em;
 	margin:0px 20px;
 }
+.list{
+	display:flex;
+	width:90%;
+	height:auto;
+	flex-flow:row wrap;
+}
 .thumbnail{
 	display:flex;
 	max-width:337.5px;
 	max-height:337.5px;
-	width:22.5%;
-	height:22.5%;
+	width:22.5vw;
+	height:22.5vw;
 	align-items: center;
 	justify-content: center;
 }

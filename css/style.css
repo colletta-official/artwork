@@ -81,6 +81,8 @@ section{
 .slideInUp{
 	-webkit-animation-name: slideInUp;
 	animation-name: slideInUp;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
 }
 
 @media all and (max-width:768px){

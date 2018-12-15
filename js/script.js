@@ -4,7 +4,11 @@ $(document).ready(function(){
 		var top=$(this).offset().top;
 		var bot=$(window).height();
 		var hei=$(this).height();
-		if(top<bot-hei) $(this).css('opacity', '1');
+		if(top<bot-hei)
+		{
+			$(this).css('opacity', '1');
+			$(this).find('.popup').eq(0).css('cursor','pointer');
+		}
 		else $(this).css('opacity', '0');
 	});
 	$(".scrollBlind")[0].onscroll=function(){
@@ -15,6 +19,7 @@ $(document).ready(function(){
 			if(top<bot-hei && $(this).css('opacity') == '0')
 			{
 				$(this).css('display', 'flex');
+				$(this).find('.popup').eq(0).css('cursor','pointer');
 				$(this).addClass('slideInUp');
 			}
 		});

@@ -2,7 +2,6 @@ $(document).ready(function(){
 	dataLoad();
 	$(".scrollBlind")[0].onscroll=function(){
 		$(".thumbnail").each(function (e) {
-			e.preventDefault();
 			var top=$(this).offset().top;
 			var bot=$(".scrollBlind").height();
 			var hei=$(this).height();

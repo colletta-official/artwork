@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var hei=$(this).height();
 		if(top<bot-hei)
 		{
-			$(this).addClass('.viz'));
+			$(this).addClass('.viz');
 		}
 	});
 	$(".thumbnail popup").each(function () {

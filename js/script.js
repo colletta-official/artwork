@@ -8,7 +8,7 @@ $(document).ready(function(){
 			var hei=$(this).height();
 			if(top+hei<bot) $(this).addClass('slideInUp');
 			else $(this).removeClass('slideInUp');
-		}
+		});
 	});
 });
 function dataLoad()

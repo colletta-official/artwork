@@ -6,7 +6,6 @@ $(document).ready(function(){
 			var bot=$(".scrollBlind").height();
 			var hei=$(this).height();
 			if(top+hei<bot) $(this).addClass('slideInUp');
-			else $(this).removeClass('slideInUp');
 		});
 	};
 });

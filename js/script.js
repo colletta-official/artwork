@@ -17,6 +17,7 @@ $(document).ready(function(){
 			$p.stop().fadeToggle("slow");
 			console.log($p, "dimi");
 			*/
+			console.log(this, "dimi");
 			$(this).stop().fadeToggle("slow");
 		});
 	});

@@ -6,7 +6,7 @@ function dataLoad()
 	for(var i=0;i<imgList.length;i++)
 	{
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+"'></div>");
-		$tac.appendTo("#illust");
+		$tac.appendTo(".list").eq(0);
 	}
 }
 function pad(n, width) {

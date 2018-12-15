@@ -9,12 +9,15 @@ $(document).ready(function(){
 			$(this).addClass('.viz'));
 		}
 	});
-	$(".thumbnail img").each(function () {
+	$(".thumbnail popup").each(function () {
 		$(this).on("hover", function (e) {
 			e.preventDefault();
+			/*
 			var $p=$(this).siblings().eq(0);
 			$p.stop().fadeToggle("slow");
 			console.log($p, "dimi");
+			*/
+			$(this).stop().fadeToggle("slow");
 		});
 	});
 	$(".scrollBlind")[0].onscroll=function(){

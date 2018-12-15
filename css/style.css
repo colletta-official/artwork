@@ -92,6 +92,11 @@ section{
 	position:fixed;
 	z-index:100;
 }
+.closeButton{
+	position:absolute;
+	right:4%;
+	top:4%;
+}
 .wide{
 	display:flex;
 	justify-content:center;

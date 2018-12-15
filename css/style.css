@@ -32,6 +32,20 @@ section{
 	font-size: 2.25em;
 	margin:0px 20px;
 }
+.thumbnail{
+	display:flex;
+	max-width:337.5px;
+	max-height:337.5px;
+	width:22.5%;
+	height:22.5%;
+	align-items: center;
+	justify-content: center;
+}
+.thumbnail img{
+	max-width:300px;
+	width:88.8888888%;
+}
+
 @media all and (max-width:768px){
 	.sectionTitle hr{
 		max-width:100px;

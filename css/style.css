@@ -88,6 +88,28 @@ section{
 	opacity:1;
 }
 
+.wide{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:fixed;
+	width:100%;
+	height:100%;
+	opacity:0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.wide:target {
+	opacity:1;
+ 	pointer-events: auto;
+}
+.widePicArea{
+	width:80vmin;
+	height:80vmin;
+	overflow:hidden;
+}
+
 //animation
 @-webkit-keyframes slideInUp{
 	from{

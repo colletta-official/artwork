@@ -32,7 +32,7 @@ function dataLoad()
 {
 	for(var i=0;i<imgList.length;i++)
 	{
-		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'><div class="popup"><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div></div>");
+		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'><div class='popup'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div></div>");
 		$tac.appendTo($(".list").eq(0));
 	}
 }

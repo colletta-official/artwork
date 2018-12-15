@@ -64,10 +64,18 @@ section{
 	height:88.8888888%;
 	background-color:RGBA(0,0,0,0.4);
 	color:#ffffff;
+	transition:opacity 0.5s;
 }
-.viz{
+.popup div{
+	width:90%;
+	height:90%;
+	margin:5%;
+	border:3px solid #ffffff;
+}
+.popup:hover{
 	opacity:1;
 }
+
 //animation
 @-webkit-keyframes slideInUp{
 	from{

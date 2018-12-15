@@ -7,7 +7,7 @@ $(document).ready(function(){
 		if(top<bot-hei) $(this).css('opacity', '1');
 		$(this).on("hover", function (e) {
 			var $p=$(this).find(".popup").eq(0);
-			$p.fadeToggle("slow");
+			$p.stop().fadeToggle("slow");
 		});
 	});
 	$(".scrollBlind")[0].onscroll=function(){

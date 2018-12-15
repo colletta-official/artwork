@@ -58,9 +58,26 @@ section{
 		max-width:100px;
 		width:20%;
 	}
+	.list{
+		width:96.428571%;
+	}
+	.thumbnail{
+		width:32.142857vw;
+		height:32.142857vw;
+	}
 }
 @media all and (max-width:425px){
 	.sectionTitle{
 		height:50px;
+	}
+	.list{
+		width:96%;
+	}
+	.thumbnail{
+		width:48vw;
+		height:48vw;
+	}
+	.thumbnail img{
+		width:91.666666%;
 	}
 }

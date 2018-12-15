@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var hei=$(this).height();
 		if(top<bot-hei)
 		{
-			$(this).css('background-color', '#24adaf');
+			$(this).addClass('.viz'));
 		}
 	});
 	$(".thumbnail img").each(function () {

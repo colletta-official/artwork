@@ -97,6 +97,8 @@ section{
 	right:4%;
 	top:4%;
 	z-index:101;
+	opacity:0;
+	transition: opacity 400ms ease-in;
 }
 .wide{
 	display:flex;

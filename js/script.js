@@ -14,6 +14,7 @@ $(document).ready(function(){
 			e.preventDefault();
 			var $p=$(this).siblings().eq(0);
 			$p.stop().fadeToggle("slow");
+			console.log($p, "dimi");
 		});
 	});
 	$(".scrollBlind")[0].onscroll=function(){

@@ -4,10 +4,7 @@ $(document).ready(function(){
 		var top=$(this).offset().top;
 		var bot=$(window).height();
 		var hei=$(this).height();
-		if(top<bot-hei)
-		{
-			$(this).addClass('.viz');
-		}
+		if(top<bot-hei) $(this).css('opacity', '1');
 	});
 	$(".thumbnail popup").each(function () {
 		$(this).on("hover", function (e) {
@@ -26,11 +23,7 @@ $(document).ready(function(){
 			var top=$(this).offset().top;
 			var bot=$(window).height();
 			var hei=$(this).height();
-			if(top<bot-hei)
-			{
-				$(this).addClass('');
-				if($(this).css('opacity') == '0') $(this).addClass('slideInUp');
-			}
+			if(top<bot-hei && $(this).css('opacity') == '0') $(this).addClass('slideInUp');
 		});
 	};
 });

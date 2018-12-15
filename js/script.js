@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var top=$(this).offset().top;
 		var bot=$(window).height();
 		var hei=$(this).height();
-		if(top<bot-hei) $(this).css('opacity', '1');
+//		if(top<bot-hei) $(this).css('opacity', '1');
 	});
 	$(".thumbnail img").each(function () {
 		$(this).on("hover", function (e) {

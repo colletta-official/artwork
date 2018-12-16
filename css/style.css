@@ -159,7 +159,7 @@ section{
 }
 .realTextArea {
 	position: relative;
-	top: 100%;
+	top: calc(100% + 5px);
 	width: auto;
 	height: 20%;
 	padding: 10px;

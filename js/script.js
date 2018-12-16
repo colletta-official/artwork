@@ -35,6 +35,9 @@ $(document).ready(function(){
 		}
 	});
 });
+$(window).resize(function(){
+	modalResolutionChange();
+});
 function dataLoad()
 {
 	for(var i=0;i<imgList.length;i++)
@@ -46,12 +49,6 @@ function dataLoad()
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
 		var $wide=$('<section class="wide" id='+title+'></section>');
 		var $widePicArea=$("<div class='widePicArea'></div>");
-		/*
-		for(var j=0; j=imgList[i].src.length; j++)
-		{
-			$widePicArea.append($("<img src='img/"+imgList[i].src[j]+"'>"));
-		}
-		*/
 		var $wideTextArea=$("<div class='wideTextArea'><div class='realTextArea'>"+imgList[i].description+"</div></div>");
 		var $d=$("<div></div>");
 		$d.append($widePicArea);
@@ -77,11 +74,13 @@ function viewPic(str)
 	var n=picDic[str];
 	location.href=link;
 	var $picArea=$(link).find(".widePicArea");
+	var $imgArea;
 	if($picArea.has("img").length == 0)
 	{
-		$picArea.append($("<img src='img/"+imgList[n].src[0]+"'>"));
+		$imgArea=$( "<img src='img/" + imgList[n].src[0] + "' class='res_" + imgList[n].resol[0] +"'>" );
+		$imgArea.addClass('able');
+		$picArea.append($imgArea);
 	}
-	console.log("<img src='img/"+imgList[n].src[0]+"'>", imgList[n], $picArea, imgList[n].src.length);
 	/*
 	for(var j=0; j=imgList[n].src.length; j++)
 	{
@@ -89,10 +88,27 @@ function viewPic(str)
 	}
 	*/
 	$(".closeButton").addClass('able');
+	modalResolutionChange();
 }
 function closePic()
 {
 	location.href="#";
 	$(".realTextArea").removeClass('able');
 	$(".closeButton").removeClass('able');
+}
+
+function modalResolutionChange()
+{
+	if($(".wide:target").length == 0) return;
+	var $curr=$(".wide:target").find('able');
+	var resolution=parseInt($curr.attr('class').split("res_")[1].split(" ")[0]);
+	if(($(window).width/$(window).height) > resolution/1280)
+	{
+		$(".wide:target").addClass('landscape');
+		$(".wide:target").removeClass('portlait');
+	}
+	else{
+		$(".wide:target").removeClass('landscape');
+		$(".wide:target").addClass('portlait');
+	}
 }

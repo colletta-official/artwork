@@ -70,7 +70,7 @@ function viewPic(str, n)
 	var link="#"+str;
 	location.href=link;
 	var $picArea=$(link).find(".widePicArea");
-	if($picArea.has("img") == false)
+	if($picArea.has("img").length == 0)
 	{
 		$picArea.append($("<img src='img/"+imgList[n].src[0]+"'>"));
 	}

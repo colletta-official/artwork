@@ -129,6 +129,8 @@ section{
 	width:auto;
 	max-height:1280px;
 	height:80vmin;
+	position:relative;
+	display:flex;
 }
 .widePicArea{
 	width:100%;

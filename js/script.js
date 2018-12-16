@@ -107,10 +107,10 @@ function modalResolutionChange()
 	if(($(window).width()/$(window).height()) > resolution/1280)
 	{
 		$modal.addClass('landscape');
-		$modal.removeClass('portlait');
+		$modal.removeClass('portrait');
 	}
 	else{
 		$modal.removeClass('landscape');
-		$modal.addClass('portlait');
+		$modal.addClass('portrait');
 	}
 }

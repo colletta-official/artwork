@@ -40,7 +40,7 @@ function dataLoad()
 		var title='"'+imgList[i].title.replace( / /gi, '_')+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
-		var $wide=$('<div class="wide" id='+title+'></div>');
+		var $wide=$('<section class="wide" id='+title+'></section>');
 		var $widePicArea=$("<div class='widePicArea'></div>");
 		/*
 		for(var j=0; j=imgList[i].src.length; j++)
@@ -49,8 +49,10 @@ function dataLoad()
 		}
 		*/
 		var $wideTextArea=$("<div class='wideTextArea'><div class='realTextArea'>"+imgList[i].description+"</div></div>");
-		$wide.append($widePicArea);
-		$wide.append($wideTextArea);
+		var $d=$("<div></div>");
+		$d.append($widePicArea);
+		$d.append($wideTextArea);
+		$wide.append($d);
 		$wide.appendTo($('#wideContainer'));
 		$tac.append($popup);
 		$tac.appendTo($(".list").eq(0));

@@ -87,8 +87,8 @@ function viewPic(str)
 		{
 			var $leftButton=$("<img src='img/prev.png' onclick='prev_(this)' class='controlButton lefter'>");
 			var $rightButton=$("<img src='img/next.png' onclick='next_(this)' class='controlButton righter'>");
-			$picArea.append($leftButton);
-			$picArea.append($rightButton);
+			$picArea.parent().append($leftButton);
+			$picArea.parent().append($rightButton);
 		}
 	}
 	$(".closeButton").addClass('able');

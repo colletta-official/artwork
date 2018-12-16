@@ -124,6 +124,7 @@ function prev_(e){
 	var ableIndex=$pic.children(".able").index();
 	$list.eq(ableIndex).removeClass("able");
 	$list.eq((ableIndex+$list.length-1)%$list.length).addClass("able");
+	modalResolutionChange();
 }
 function next_(e){
 	var $pic=$(e).siblings(".widePicArea");
@@ -131,4 +132,5 @@ function next_(e){
 	var ableIndex=$pic.children(".able").index();
 	$list.eq(ableIndex).removeClass("able");
 	$list.eq((ableIndex+1)%$list.length).addClass("able");
+	modalResolutionChange();
 }

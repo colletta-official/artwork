@@ -24,6 +24,14 @@ $(document).ready(function(){
 			}
 		});
 	};
+	$(".widePicArea").click(function(){
+		if($(window).width()>768)
+		{
+			var $q=$(this).siblings(".wideTextArea").children(".realTextArea");
+			if($q.hasClass('able')) $q.removeClass('able');
+			else $q.addClass('able');
+		}
+	});
 });
 function dataLoad()
 {
@@ -57,10 +65,10 @@ function pad(n, width) {
 function viewPic(i)
 {
 	location.href="#"+i;
-	$(".closeButton").css('opacity', '1');
+	$(".closeButton").addClass('able');
 }
 function closePic()
 {
 	location.href="#";
-	$(".closeButton").css('opacity', '0');
+	$(".closeButton").removeClass('able');
 }

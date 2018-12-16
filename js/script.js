@@ -99,8 +99,8 @@ function closePic()
 
 function modalResolutionChange()
 {
+	var $curr=$(".wide:target").find('.able');
 	if($(".wide:target").length == 0) return;
-	var $curr=$(".wide:target").find('able');
 	var resolution=parseInt($curr.attr('class').split("res_")[1].split(" ")[0]);
 	if(($(window).width/$(window).height) > resolution/1280)
 	{

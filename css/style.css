@@ -132,7 +132,7 @@ section{
 	display:flex;
 }
 .wide>div.landscape{
-	width:auto;
+	width:fit-content;
 	height:80%;
 }
 .wide>div.portrait{
@@ -140,7 +140,7 @@ section{
 	height:auto;
 }
 .widePicArea{
-	width:100%;
+	width:fit-content;
 	height:100%;
 	background-color: white;
 	overflow:hidden;
@@ -167,6 +167,7 @@ section{
 	border-radius: 20px 20px 0px 0px;
 	text-size:0.8em;
 	transition: top 500ms cubic-bezier(0.23, 1, 0.32, 1);
+	box-shadow:0px -5px 3px RGBA(0,0,0,0.3);
 }
 .realTextArea.able{
 	top: calc(80% - 20px);

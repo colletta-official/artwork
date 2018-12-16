@@ -65,9 +65,14 @@ function pad(n, width) {
 	return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 }
 
-function viewPic(i)
+function viewPic(str, n)
 {
-	location.href="#"+i;
+	var link="#"+str;
+	location.href=link;
+	for(var j=0; j=imgList[i].src.length; j++)
+	{
+		$(link).append($("<img src='img/"+imgList[n].src[j]+"'>"));
+	}
 	$(".closeButton").addClass('able');
 }
 function closePic()

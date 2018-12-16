@@ -99,16 +99,18 @@ function closePic()
 
 function modalResolutionChange()
 {
-	var $curr=$(".wide:target").find('.able');
-	if($(".wide:target").length == 0) return;
+	var $target=$(".wide:target");
+	if($target.length == 0) return;
+	var $curr=$target.find('.able');
+	var $modal=$target.children('div').eq(0);
 	var resolution=parseInt($curr.attr('class').split("res_")[1].split(" ")[0]);
-	if(($(window).width/$(window).height) > resolution/1280)
+	if(($(window).width()/$(window).height()) > resolution/1280)
 	{
-		$(".wide:target").addClass('landscape');
-		$(".wide:target").removeClass('portlait');
+		$modal.addClass('landscape');
+		$modal.removeClass('portlait');
 	}
 	else{
-		$(".wide:target").removeClass('landscape');
-		$(".wide:target").addClass('portlait');
+		$modal.removeClass('landscape');
+		$modal.addClass('portlait');
 	}
 }

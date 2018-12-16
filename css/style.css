@@ -98,7 +98,13 @@ section{
 	top:4%;
 	z-index:101;
 	opacity:0;
+	cursor:default;
 	transition: opacity 400ms ease-in;
+}
+.closeButton .able{
+	opacity:1;
+	cursor:pointer;
+	pointer-events: auto;
 }
 .wide{
 	display:flex;

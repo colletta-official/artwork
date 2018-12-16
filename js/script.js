@@ -40,7 +40,7 @@ function dataLoad()
 	{
 		var title='"'+imgList[i].title.replace( / /gi, '_')+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
-		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
+		var $popup=$("<div class='popup' onclick='viewPic("+title+", "+i+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
 		var $wide=$('<section class="wide" id='+title+'></section>');
 		var $widePicArea=$("<div class='widePicArea'></div>");
 		/*
@@ -69,7 +69,7 @@ function viewPic(str, n)
 {
 	var link="#"+str;
 	location.href=link;
-	for(var j=0; j=imgList[i].src.length; j++)
+	for(var j=0; j=imgList[n].src.length; j++)
 	{
 		$(link).append($("<img src='img/"+imgList[n].src[j]+"'>"));
 	}

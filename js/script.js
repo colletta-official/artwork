@@ -85,8 +85,8 @@ function viewPic(str)
 		}
 		if(j>1)
 		{
-			var $leftButton=$("<img src='img/prev.png' onclick='prev_(this)'>");
-			var $rightButton=$("<img src='img/next.png' onclick='next_(this)'>");
+			var $leftButton=$("<img src='img/prev.png' onclick='prev_(this)' class='controlButton lefter'>");
+			var $rightButton=$("<img src='img/next.png' onclick='next_(this)' class='controlButton righter'>");
 			$picArea.append($leftButton);
 			$picArea.append($rightButton);
 		}

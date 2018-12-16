@@ -77,16 +77,13 @@ function viewPic(str)
 	var $imgArea;
 	if($picArea.has("img").length == 0)
 	{
-		$imgArea=$( "<img src='img/" + imgList[n].src[0] + "' class='res_" + imgList[n].resol[0] +"'>" );
-		$imgArea.addClass('able');
-		$picArea.append($imgArea);
+		for(var j=0; j<imgList[n].src.length; j++)
+		{
+			$imgArea=$( "<img src='img/" + imgList[n].src[j] + "' class='res_" + imgList[n].resol[j] +"'>" );
+			if(j==0) $imgArea.addClass('able');
+			$picArea.append($imgArea);
+		}
 	}
-	/*
-	for(var j=0; j=imgList[n].src.length; j++)
-	{
-		$(link).append($("<img src='img/"+imgList[n].src[j]+"'>"));
-	}
-	*/
 	$(".closeButton").addClass('able');
 	modalResolutionChange();
 }

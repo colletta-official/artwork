@@ -69,10 +69,13 @@ function viewPic(str, n)
 {
 	var link="#"+str;
 	location.href=link;
+	console.log("<img src='img/"+imgList[n].src[j]+"'>", imgList[n]);
+	/*
 	for(var j=0; j=imgList[n].src.length; j++)
 	{
 		$(link).append($("<img src='img/"+imgList[n].src[j]+"'>"));
 	}
+	*/
 	$(".closeButton").addClass('able');
 }
 function closePic()

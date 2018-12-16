@@ -219,13 +219,19 @@ section{
 	.wide>div{
 		flex-flow:column wrap;
 	}
+	.wide>div.landscape{
+		height:auto;
+	}
+	
 	.wideTextArea{
 		position:relative;
 		height:auto;
+		display:flex;
 	}
 	.realTextArea {
 		position: relative;
-		width: auto;
+		flex-glow:1;
+		width:0;
 		height: auto;
 		border-radius:0px;
 		font-size:0.8em;

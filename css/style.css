@@ -156,11 +156,11 @@ section{
 	background-color: #24adaf;
 	border-radius: 20px 20px 0px 0px;
 	text-size:0.8em;
-	pointer-events:auto;
 	transition: top 500ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 .realTextArea.able{
 	top: calc(80% - 20px);
+	pointer-events:auto;
 }
 
 //animation

@@ -85,8 +85,8 @@ function viewPic(str)
 		}
 		if(j>1)
 		{
-			var $leftButton=$("<img src='img/prev.png' onclick='prev_()'>");
-			var $rightButton=$("<img src='img/next.png' onclick='next_()'>");
+			var $leftButton=$("<img src='img/prev.png' onclick='prev_(this)'>");
+			var $rightButton=$("<img src='img/next.png' onclick='next_(this)'>");
 			$picArea.append($leftButton);
 			$picArea.append($rightButton);
 		}
@@ -118,13 +118,13 @@ function modalResolutionChange()
 		$modal.addClass('portrait');
 	}
 }
-function prev_()
+function prev_(e)
 {
-	console.log(this);
+	console.log(e);
 	modalResolutionChange();
 }
-function next_()
+function next_(e)
 {
-	console.log(this);
+	console.log(e);
 	modalResolutionChange();
 }

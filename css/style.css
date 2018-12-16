@@ -154,6 +154,18 @@ section{
 .widePicArea img.able{
 	display:block;
 }
+.controlButton{
+	display:block;
+	position:absolute;
+	top:calc(50% - 20px);
+	margin:0px 10px;
+}
+.lefter{
+	right:100%;
+}
+.righter{
+	left:0%;
+}
 .wideTextArea {
 	position: absolute;
 	overflow: hidden;

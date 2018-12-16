@@ -108,6 +108,7 @@ section{
 }
 .wide{
 	display:flex;
+	flex-flow: column wrap;
 	justify-content:center;
 	align-items:center;
 	position:fixed;
@@ -127,6 +128,7 @@ section{
 .widePicArea{
 	width:80vmin;
 	height:80vmin;
+	background-color: white;
 	overflow:hidden;
 }
 .wideTextArea {

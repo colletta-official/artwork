@@ -118,13 +118,17 @@ function modalResolutionChange()
 		$modal.addClass('portrait');
 	}
 }
-function prev_(e)
-{
-	console.log(e);
-	modalResolutionChange();
+function prev_(e){
+	var $pic=$(e).siblings(".widePicArea");
+	var $list=$pic.children();
+	var ableIndex=$pic.children(".able").index();
+	$list.eq(ableIndex).removeClass("able");
+	$list.eq((ableIndex+$list.length-1)%$list.length).addClass("able");
 }
-function next_(e)
-{
-	console.log(e);
-	modalResolutionChange();
+function next_(e){
+	var $pic=$(e).siblings(".widePicArea");
+	var $list=$pic.children();
+	var ableIndex=$pic.children(".able").index();
+	$list.eq(ableIndex).removeClass("able");
+	$list.eq((ableIndex+1)%$list.length).addClass("able");
 }

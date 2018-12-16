@@ -25,6 +25,7 @@ $(document).ready(function(){
 		});
 	};
 	$(".widePicArea").click(function(){
+		console.log("clicked");
 		if($(window).width()>768)
 		{
 			var $q=$(this).siblings(".wideTextArea").children(".realTextArea");
@@ -72,5 +73,6 @@ function viewPic(i)
 function closePic()
 {
 	location.href="#";
+	$(".realTextArea").removeClass('able');
 	$(".closeButton").removeClass('able');
 }

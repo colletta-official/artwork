@@ -83,6 +83,13 @@ function viewPic(str)
 			if(j==0) $imgArea.addClass('able');
 			$picArea.append($imgArea);
 		}
+		if(j>1)
+		{
+			var $leftButton=$("<img src='img/prev.png' onclick='prev_()'>");
+			var $rightButton=$("<img src='img/next.png' onclick='next_()'>");
+			$picArea.append($leftButton);
+			$picArea.append($rightButton);
+		}
 	}
 	$(".closeButton").addClass('able');
 	modalResolutionChange();
@@ -110,4 +117,14 @@ function modalResolutionChange()
 		$modal.removeClass('landscape');
 		$modal.addClass('portrait');
 	}
+}
+function prev_()
+{
+	console.log(this);
+	modalResolutionChange();
+}
+function next_()
+{
+	console.log(this);
+	modalResolutionChange();
 }

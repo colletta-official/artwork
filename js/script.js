@@ -69,7 +69,12 @@ function viewPic(str, n)
 {
 	var link="#"+str;
 	location.href=link;
-	console.log("<img src='img/"+imgList[n].src[0]+"'>", imgList[n], $(link), imgList[n].src.length);
+	var $picArea=$(link).find(".widePicArea");
+	if($picArea.has("img") == false)
+	{
+		$picArea.append($("<img src='img/"+imgList[n].src[0]+"'>"));
+	}
+	console.log("<img src='img/"+imgList[n].src[0]+"'>", imgList[n], $picArea, imgList[n].src.length);
 	/*
 	for(var j=0; j=imgList[n].src.length; j++)
 	{

@@ -35,6 +35,7 @@ section{
 }
 .list{
 	display:flex;
+	max-width: 1350px;
 	width:90%;
 	height:auto;
 	flex-flow:row wrap;

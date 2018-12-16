@@ -159,12 +159,18 @@ section{
 	position:absolute;
 	top:calc(50% - 20px);
 	margin:0px 10px;
+	transform:scale(0.8);
+	transition: transform 400ms ease-in;
+	cursor:pointer;
+}
+.controlButton:hover{
+	transform:scale(1);
 }
 .lefter{
 	right:100%;
 }
 .righter{
-	left:0%;
+	left:100%;
 }
 .wideTextArea {
 	position: absolute;

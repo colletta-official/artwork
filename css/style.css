@@ -123,6 +123,28 @@ section{
 	height:80vmin;
 	overflow:hidden;
 }
+.wideTextArea {
+	position: absolute;
+	overflow: hidden;
+	width: 80vmin;
+	height: 80vmin;
+	pointer-events:none;
+}
+.realTextArea {
+	position: relative;
+	top: 100%;
+	width: auto;
+	height: 20%;
+	padding: 10px;
+	background-color: #24adaf;
+	border-radius: 20px 20px 0px 0px;
+	text-size:0.8em;
+	pointer-events:auto;
+	transition: opacity 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.realTextArea .able{
+	top: calc(80% - 20px);
+}
 
 //animation
 @-webkit-keyframes slideInUp{

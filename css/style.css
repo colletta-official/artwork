@@ -149,6 +149,10 @@ section{
 .widePicArea img{
 	max-width:100%;
 	max-height:100%;
+	display:none;
+}
+.widePicArea img.able{
+	display:block;
 }
 .wideTextArea {
 	position: absolute;

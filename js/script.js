@@ -33,6 +33,10 @@ $(document).ready(function(){
 			else $q.addClass('able');
 		}
 	});
+	if(window.location.hash != "")
+	{
+		viewPic(decodeURL(window.location.hash).substr(1,99999));
+	}
 });
 $(window).resize(function(){
 	modalResolutionChange();

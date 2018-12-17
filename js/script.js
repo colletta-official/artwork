@@ -35,7 +35,7 @@ $(document).ready(function(){
 	});
 	if(window.location.hash != "")
 	{
-		viewPic(decodeURL(window.location.hash).substr(1,99999));
+		viewPic(decodeURI(window.location.hash).substr(1,99999));
 	}
 });
 $(window).resize(function(){

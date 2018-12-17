@@ -280,8 +280,10 @@ section{
 	}
 	.lefter{
 		left:0%;
+		right:auto;
 	}
 	.righter{
+		left:auto;
 		right:0%;
 	}
 }

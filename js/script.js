@@ -43,11 +43,10 @@ $(window).resize(function(){
 });
 function dataLoad()
 {
-	var nn=0;
 	for(var i=0;i<imgList.length;i++)
 	{
 		var title=changeHashable(imgList[i].title);
-		picDic[title]={no: nn, type: "illust"};
+		picDic[title]={no: i, type: "illust"};
 		title='"'+title+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
@@ -61,12 +60,11 @@ function dataLoad()
 		$wide.appendTo($('#wideContainer'));
 		$tac.append($popup);
 		$tac.appendTo($("#illust .list").eq(0));
-		nn++;
 	}
 	for(var i=0;i<toonList.length;i++)
 	{
 		var title=changeHashable(toonList[i].title);
-		picDic[title]={no: nn, type: "cartoon"};
+		picDic[title]={no: i, type: "cartoon"};
 		title='"'+title+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-cartoon-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+toonList[i].title+"</p><p>"+toonList[i].date+"</p></div></div>");
@@ -80,7 +78,6 @@ function dataLoad()
 		$wide.appendTo($('#wideContainer'));
 		$tac.append($popup);
 		$tac.appendTo($("#cartoon .list").eq(0));
-		nn++;
 	}
 }
 function pad(n, width) {

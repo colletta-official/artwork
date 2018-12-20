@@ -43,10 +43,11 @@ $(window).resize(function(){
 });
 function dataLoad()
 {
+	var nn=0;
 	for(var i=0;i<imgList.length;i++)
 	{
 		var title=changeHashable(imgList[i].title);
-		picDic[title]=i;
+		picDic[title]=nn;
 		title='"'+title+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
@@ -59,7 +60,27 @@ function dataLoad()
 		$wide.append($d);
 		$wide.appendTo($('#wideContainer'));
 		$tac.append($popup);
-		$tac.appendTo($(".list").eq(0));
+		$tac.appendTo($("#illust .list").eq(0));
+		nn++;
+	}
+	for(var i=0;i<toonList.length;i++)
+	{
+		var title=changeHashable(toonList[i].title);
+		picDic[title]=nn;
+		title='"'+title+'"';
+		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
+		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
+		var $wide=$('<section class="wide" id='+title+'></section>');
+		var $widePicArea=$("<div class='widePicArea'></div>");
+		var $wideTextArea=$("<div class='wideTextArea'><div class='realTextArea'>"+imgList[i].description+"</div></div>");
+		var $d=$("<div></div>");
+		$d.append($widePicArea);
+		$d.append($wideTextArea);
+		$wide.append($d);
+		$wide.appendTo($('#wideContainer'));
+		$tac.append($popup);
+		$tac.appendTo($("#cartoon .list").eq(0));
+		nn+;
 	}
 }
 function pad(n, width) {

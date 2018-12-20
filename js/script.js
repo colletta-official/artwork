@@ -103,9 +103,9 @@ function viewPic(str)
 	{
 		if(picDic[str].type == "cartoon")
 		{
-			for(var j=0; j<imgList[n].page; j++)
+			for(var j=0; j<toonList[n].page; j++)
 			{
-				$imgArea=$( "<img src='img/" + imgList[n].src + '-' + pad(j, 2) + "' class='res_" + imgList[n].resol[j] +"'>" );
+				$imgArea=$( "<img src='img/" + toonList[n].src + '-' + pad(j, 2) + "' class='res_" + toonList[n].resol[j] +"'>" );
 				if(j==0) $imgArea.addClass('able');
 				$picArea.append($imgArea);
 			}

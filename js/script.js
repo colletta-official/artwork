@@ -102,7 +102,7 @@ function viewPic(str)
 		{
 			for(var j=0; j<toonList[n].page; j++)
 			{
-				$imgArea=$( "<img src='img/" + toonList[n].src + '-' + pad(j+1, 2) + ".png' class='res_" + toonList[n].resol[j] +"'>" );
+				$imgArea=$( "<img src='img/" + toonList[n].src + '-' + pad(j+1, 2) + ".png' class='res_" + toonList[n].resol +"'>" );
 				if(j==0) $imgArea.addClass('able');
 				$picArea.append($imgArea);
 			}

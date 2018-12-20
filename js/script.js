@@ -69,10 +69,10 @@ function dataLoad()
 		picDic[title]={no: nn, type: "cartoon"};
 		title='"'+title+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-cartoon-"+pad(i+1, 2)+".png'></div>");
-		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
+		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+toonList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
 		var $wide=$('<section class="wide" id='+title+'></section>');
 		var $widePicArea=$("<div class='widePicArea'></div>");
-		var $wideTextArea=$("<div class='wideTextArea'><div class='realTextArea'>"+imgList[i].description+"</div></div>");
+		var $wideTextArea=$("<div class='wideTextArea'><div class='realTextArea'>"+toonList[i].description+"</div></div>");
 		var $d=$("<div></div>");
 		$d.append($widePicArea);
 		$d.append($wideTextArea);

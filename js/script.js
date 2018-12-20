@@ -68,7 +68,7 @@ function dataLoad()
 		var title=changeHashable(toonList[i].title);
 		picDic[title]={no: nn, type: "cartoon"};
 		title='"'+title+'"';
-		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
+		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-cartoon-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
 		var $wide=$('<section class="wide" id='+title+'></section>');
 		var $widePicArea=$("<div class='widePicArea'></div>");
@@ -101,7 +101,7 @@ function viewPic(str)
 	var $imgArea;
 	if($picArea.has("img").length == 0)
 	{
-		if(picDir[str].type == "cartoon")
+		if(picDic[str].type == "cartoon")
 		{
 			for(var j=0; j<imgList[n].page; j++)
 			{

@@ -47,7 +47,7 @@ function dataLoad()
 	for(var i=0;i<imgList.length;i++)
 	{
 		var title=changeHashable(imgList[i].title);
-		picDic[title]=nn;
+		picDic[title]={no: nn, type: "illust"};
 		title='"'+title+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
@@ -66,7 +66,7 @@ function dataLoad()
 	for(var i=0;i<toonList.length;i++)
 	{
 		var title=changeHashable(toonList[i].title);
-		picDic[title]=nn;
+		picDic[title]={no: nn, type: "cartoon"};
 		title='"'+title+'"';
 		var $tac=$("<div class='thumbnail'><img src='img/thumbnail/thumbnail-"+pad(i+1, 2)+".png'></div>");
 		var $popup=$("<div class='popup' onclick='viewPic("+title+")'><div><p class='titlePic'>"+imgList[i].title+"</p><p>"+imgList[i].date+"</p></div></div>");
@@ -80,7 +80,7 @@ function dataLoad()
 		$wide.appendTo($('#wideContainer'));
 		$tac.append($popup);
 		$tac.appendTo($("#cartoon .list").eq(0));
-		nn+;
+		nn++;
 	}
 }
 function pad(n, width) {
@@ -95,17 +95,28 @@ function changeHashable(str){
 function viewPic(str)
 {
 	var link="#"+str;
-	var n=picDic[str];
+	var n=picDic[str].no;
 	location.href=link;
 	var $picArea=$(link).find(".widePicArea");
 	var $imgArea;
 	if($picArea.has("img").length == 0)
 	{
-		for(var j=0; j<imgList[n].src.length; j++)
+		if(picDir[str].type == "cartoon")
 		{
-			$imgArea=$( "<img src='img/" + imgList[n].src[j] + "' class='res_" + imgList[n].resol[j] +"'>" );
-			if(j==0) $imgArea.addClass('able');
-			$picArea.append($imgArea);
+			for(var j=0; j<imgList[n].page; j++)
+			{
+				$imgArea=$( "<img src='img/" + imgList[n].src + '-' + pad(j, 2) + "' class='res_" + imgList[n].resol[j] +"'>" );
+				if(j==0) $imgArea.addClass('able');
+				$picArea.append($imgArea);
+			}
+		}
+		else{
+			for(var j=0; j<imgList[n].src.length; j++)
+			{
+				$imgArea=$( "<img src='img/" + imgList[n].src[j] + "' class='res_" + imgList[n].resol[j] +"'>" );
+				if(j==0) $imgArea.addClass('able');
+				$picArea.append($imgArea);
+			}
 		}
 		if(j>1)
 		{
